@@ -1,0 +1,122 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #titulo {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .container > div {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  
+
+
+#imagem-1 {
+     /* Ajuste o tamanho conforme necessário */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Aumenta o tamanho em 10% para id="imagem-1" */
+  #imagem-1 img:hover {
+    transform: scale(1.1); 
+  }
+
+  /* Move a imagem 20px para a direita para id="imagem-2"*/ 
+  #imagem-2 {
+    width: 300px;
+    transition: transform 0.5s ease;
+  }
+  
+  #imagem-2 img:hover {
+    transform: translateX(20px); 
+  }
+
+  /* Gira a imagem em 10 graus para id="imagem-3" */
+  #imagem-3 img {
+    width: 300px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  #imagem-3 img:hover {
+    transform: rotate(10deg); 
+  }
+
+  #imagem-4 img {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  /* Flutuação para id="imagem-5"*/
+  #imagem-5 img {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /*Fade in - Fade out para: id="imagem-6"*/
+
+  #imagem-6 img {
+    animation: fadeInOut 3s ease-in-out infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
